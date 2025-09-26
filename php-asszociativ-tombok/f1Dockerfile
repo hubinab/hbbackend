@@ -1,0 +1,8 @@
+FROM php:8.4-cli-alpine
+
+WORKDIR /app
+
+COPY versenyzok.php versenyzok.php
+COPY f1.php f1.php
+
+ENTRYPOINT [ "php", "f1.php" ]

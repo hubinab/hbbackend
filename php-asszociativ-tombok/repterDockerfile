@@ -1,0 +1,8 @@
+FROM php:8.4-cli-alpine
+
+WORKDIR /app
+
+COPY jaratok.php jaratok.php
+COPY repter.php repter.php
+
+ENTRYPOINT [ "php", "repter.php" ]

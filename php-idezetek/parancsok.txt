@@ -1,0 +1,11 @@
+# ha meg nincs csak akkor kell buid
+docker build -t hb/php . 
+# interaktiv php inditasa teszteleshez
+docker run --rm -it -v "$(pwd):/app" hb/php
+# full telepiteshez build
+docker build -t hb/idezetek -f idezetek.Dockerfile .
+# telepitett futtatasa
+docker run --rm hb/idezetek
+
+# elkeszult projekt zip-elese a vendor konyvtar nelkul
+zip -r hubina-balazs-idezetek.zip hubina-balazs-idezetek -x "hubina-balazs-idezetek/vendor/*"
