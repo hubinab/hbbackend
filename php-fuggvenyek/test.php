@@ -30,3 +30,31 @@ echo datumIdo("másodperc") . "\n"; // 08
 echo datumIdo("év") . "\n"; // 2022
 echo datumIdo("hónap") . "\n"; // 09
 echo datumIdo("nap") . "\n"; // 06
+
+echo "--------------------\n";
+echo utolso([5,11,76,3]) . "\n"; // 3
+echo "--------------------\n";
+
+echo osszeg([5,11,76,3]) . "\n"; // 95
+echo "--------------------\n";
+
+echo szorzat([5,11,76,3]) . "\n"; // 95
+echo "--------------------\n";
+
+echo parosDb([]) . "\n"; // 0
+echo parosDb([5,11,76,3]) . "\n"; // 1
+echo parosDb([37,74,3,71,54]) . "\n"; // 2
+echo "--------------------\n";
+
+echo parosOsszeg([]) . "\n"; // 0
+echo parosOsszeg([5,11,76,3]) . "\n"; // 76
+echo parosOsszeg([37,74,3,71,54]) . "\n"; // 128
+echo "--------------------\n";
+
+echo elsoNOsszeg([5,11,76,3],2) . "\n"; // 16
+echo elsoNOsszeg([37,74,3,71,54],3) . "\n"; // 114
+echo "--------------------\n";
+
+echo f2c(68) . "\n"; // 20
+echo c2f(30) . "\n"; // 86
+echo "--------------------\n";
