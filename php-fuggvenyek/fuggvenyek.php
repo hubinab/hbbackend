@@ -83,3 +83,67 @@ function datumIdo ($p):string
             break;
     }
 }
+
+function utolso ($p):int
+{
+    return array_pop($p);
+}
+
+function osszeg($p):int
+{
+    return array_sum($p);
+}
+
+function szorzat($p):int
+{
+    $sz = 1;
+    foreach ($p as $v) {
+        $sz *= $v;
+    }
+    return $sz;
+}
+
+function parosDb($p):int
+{
+    $s = 0;
+    foreach ($p as $v) {
+        if (parosE($v)) {
+            $s++;
+        }
+    }
+    return $s;
+}
+
+function parosOsszeg($p):int
+{
+    $s = 0;
+    foreach ($p as $v) {
+        if (parosE($v)) {
+            $s+=$v;
+        }
+    }
+    return $s;
+}
+
+function elsoNOsszeg($p, $n):int
+{
+    if ($n > count($p)) {
+        return -1;
+    }
+
+    $s = 0;
+    for ($i=0; $i < $n; $i++) { 
+        $s += $p[$i];
+    }
+    return $s;
+}
+
+function f2c($f):float
+{
+    return ($f-32)/1.8;
+}
+
+function c2f($c):float
+{
+    return $c*1.8+32;
+}
