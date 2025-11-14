@@ -46,7 +46,7 @@ class QuoteController extends Controller
                 "name" => "Lali",
                 ]]);
     }
-
+    
     function harryPotter(string $slug): JsonResponse
     {
         if (!in_array($slug, ["fred-es-george", "hermione"])) {
